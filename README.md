@@ -1,7 +1,10 @@
-# Matemática
-[Discord oficial](https://www.blazehosting.com.br/discord)
+<h1 align="center">Matemática</h1>
 
 Um plugin em fase BETA de eventos matemáticos para PocketMine 3.
+<div align="center">
+	<a href="https://www.blazehosting.com.br/discord">
+        <img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="discord">
+    </a>
 
 ## Uso
 Primeiramente, configure a chave no arquivo [`config.yml`](https://github.com/BlockHorizons/InvSee/blob/master/resources/modules.yml) e, em seguida, proceda com as configurações básicas.
