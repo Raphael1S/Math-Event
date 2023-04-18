@@ -8,6 +8,10 @@ Tempo: "5" # Medido em minutos.
 EconomyAPI: "sim" # Opções: sim ou não
 Recompensa: "1000"
 
+# Indique se você deseja habilitar o registro de logs no console para exibir o resultado e o vencedor.
+# Se ativado, o resultado de uma nova conta será exibido no console assim que ela for iniciada.
+Logs Console: "sim" # Opções: sim ou não
+
 # A Chave do Plugin.
 Chave: ""
 
