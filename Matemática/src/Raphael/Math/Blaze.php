@@ -26,14 +26,10 @@ class Blaze extends PluginBase implements Listener {
             if ($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") === null) {
                 $this->getLogger()->warning("§cPlugin EconomyAPI não encontrado. Desabilitando a recompensa.");
                 $this->economyapi = "não";
-                
-                
             }
         } else {
             $this->getLogger()->warning("§cEconomyAPI desabilitado. Recompensa desativada.");
         }
-
-        
             $this->chave = $config["Chave"];
     $actual = $this->getMain();
     if ($this->chave !== $actual) {
@@ -41,9 +37,7 @@ class Blaze extends PluginBase implements Listener {
       $this->getServer()->getPluginManager()->disablePlugin($this);
        return;
     }   
-        $this->getLogger()->info("§dMath habilitado! @ Raphael S.");
-
-      
+        $this->getLogger()->info("§dMath habilitado! @ Raphael S.");  
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getScheduler()->scheduleRepeatingTask(new MathTask($this, $this), 20 * 60 * $this->tempo);
 
@@ -54,8 +48,7 @@ class Blaze extends PluginBase implements Listener {
     
 public function usarEconomyAPI(Player $player) {
     if ($this->economyapi == "sim" && $this->getServer()->getPluginManager()->getPlugin("EconomyAPI") !== null) {
-        $economy = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
-        
+        $economy = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI"); 
         $this->getLogger()->warning("§bRecompensa de " . $this->economyapidinheiro . " adicionada a " . $player->getName());
         $economy->addMoney($player, $this->economyapidinheiro);
     }
@@ -69,9 +62,7 @@ public function onChat(PlayerChatEvent $event) {
         $message = str_replace(',', '.', $message); // Substitui vírgulas por pontos
         if ($message == $this->mathResult) {
             $player->sendMessage("§aParabéns, você acertou a conta e foi recompensado.");
-
             $this->mathInProgress = false;
-
             $this->getServer()->broadcastMessage("§bEVENTO §fMATEMÁTICO \n§7A conta foi resolvida corretamente por " . $player->getName() .". O resultado era " . $this->mathResult);
         }
         $this->usarEconomyAPI($player);
@@ -100,7 +91,6 @@ $this->getServer()->broadcastMessage("§bEVENTO §fMATEMÁTICO \n§7Qual é o re
 }
 $this->mathInProgress = true;
 $this->mathStartTime = time();
-
     $this->getLogger()->info("§fResultado: " . $this->mathResult);
 }
 
@@ -120,9 +110,7 @@ class MathTask extends Task {
     }
 
     public function onRun(int $currentTick) {
-        
         $plugin = $this->owner;
-
         if (!$plugin->isMathInProgress()) {
             $plugin->startNewMathTask();
             $this->lastMathSentTime = time();
