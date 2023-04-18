@@ -20,6 +20,7 @@ class Blaze extends PluginBase implements Listener {
         $this->tempo = $config["Tempo"];
         $this->economyapi = $config["EconomyAPI"];
         $this->economyapidinheiro = $config["Recompensa"];
+        $this->logs = $config["Logs Console"];
         if ($this->economyapi == "sim") {
             $this->getLogger()->warning("§aEconomyAPI habilitado. Habilitando a recompensa.");
             if ($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") === null) {
@@ -48,9 +49,11 @@ class Blaze extends PluginBase implements Listener {
 public function usarEconomyAPI(Player $player) {
     if ($this->economyapi == "sim" && $this->getServer()->getPluginManager()->getPlugin("EconomyAPI") !== null) {
         $economy = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI"); 
-        $this->getLogger()->warning("§bRecompensa de " . $this->economyapidinheiro . " adicionada a " . $player->getName());
         $economy->addMoney($player, $this->economyapidinheiro);
+    if ($this->logs == "sim") {
+        $this->getLogger()->warning("§bRecompensa de " . $this->economyapidinheiro . " adicionada a " . $player->getName());
     }
+  }
 }
 
 public function onChat(PlayerChatEvent $event) {
@@ -90,7 +93,9 @@ $this->getServer()->broadcastMessage("§bEVENTO §fMATEMÁTICO \n§7Qual é o re
 }
 $this->mathInProgress = true;
 $this->mathStartTime = time();
+    if ($this->logs == "sim") {
     $this->getLogger()->info("§fResultado: " . $this->mathResult);
+}
 }
 
     public function isMathInProgress(): bool {
