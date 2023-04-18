@@ -14,6 +14,8 @@ Primeiramente, configure a chave no arquivo [`config.yml`](https://github.com/Ra
 | Tempo | Especifique o período de espera em minutos para que o plugin envie outra conta matemática se um jogador acertar a resposta ou ninguém acertar. [`Padrão: 5`](https://github.com/Raphael1S/Math-Event/blob/PMMP-3/Matem%C3%A1tica/src/resources/config.yml) |
 | EconomyAPI | Especifique se pretende oferecer uma recompensa para aqueles que acertarem o problema matemático. [`Padrão: sim`](https://github.com/Raphael1S/Math-Event/blob/PMMP-3/Matem%C3%A1tica/src/resources/config.yml) |
 | Recompensa | O valor da recompensa. [`Padrão: 1000`](https://github.com/Raphael1S/Math-Event/blob/PMMP-3/Matem%C3%A1tica/src/resources/config.yml) |
+| Logs Console | Logs no Console [`Padrão: sim`](https://github.com/Raphael1S/Math-Event/blob/PMMP-3/Matem%C3%A1tica/src/resources/config.yml) |
+
 
 ## Tipos de Contas
 
