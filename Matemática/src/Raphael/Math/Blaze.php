@@ -22,15 +22,15 @@ class Blaze extends PluginBase implements Listener {
         $this->economyapi = $config["EconomyAPI"];
         $this->economyapidinheiro = $config["Recompensa"];
         if ($this->economyapi == "sim") {
-            $this->getLogger()->warning("§aEconomyAPI habilitado. Com recompensa.");
+            $this->getLogger()->warning("§aEconomyAPI habilitado. Habilitando a recompensa.");
             if ($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") === null) {
-                $this->getLogger()->warning("§cPlugin EconomyAPI não encontrado. Desabilitando recompensa.");
+                $this->getLogger()->warning("§cPlugin EconomyAPI não encontrado. Desabilitando a recompensa.");
                 $this->economyapi = "não";
                 
                 
             }
         } else {
-            $this->getLogger()->warning("§cEconomyAPI desabilitado. Sem recompensa.");
+            $this->getLogger()->warning("§cEconomyAPI desabilitado. Recompensa desativada.");
         }
 
         
