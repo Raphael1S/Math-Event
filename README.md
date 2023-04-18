@@ -1,6 +1,6 @@
 <h1 align="center">Matemática</h1>
 
-Um plugin de eventos matemáticos para PocketMine 3.
+<h1 align="center">Um plugin de eventos matemáticos para PocketMine 3.</>
 <div align="center">
 	<a href="https://www.blazehosting.com.br/discord">
         <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="discord">
