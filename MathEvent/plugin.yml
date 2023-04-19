@@ -1,5 +1,5 @@
 name: MathEvent
-version: 1.1.0B
+version: 1.0.0B
 api: [3.0.0]
 main: Raphael\Math\Blaze
 author: Raphael S.
