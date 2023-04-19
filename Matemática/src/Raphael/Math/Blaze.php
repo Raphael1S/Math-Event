@@ -7,6 +7,7 @@ use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\Task;
 use pocketmine\Player;
+require_once("Update.php");
 
 class Blaze extends PluginBase implements Listener {
 
@@ -15,6 +16,9 @@ class Blaze extends PluginBase implements Listener {
     public int $mathStartTime;
 
     public function onEnable() {
+        $pluginName = $this->getDescription()->getName();
+        $pluginVersion = $this->getDescription()->getVersion();
+        atualizarPlugin($this, $pluginName, $pluginVersion);
         $this->saveResource("config.yml");
         $config = yaml_parse_file($this->getDataFolder() . "config.yml");
         $this->tempo = $config["Tempo"];
