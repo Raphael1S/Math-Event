@@ -1,7 +1,7 @@
 CRIADOR: Raphael S. @ BlazeHosting
 
 
-# Especifique o período de espera para que o plugin envie outra conta matemática se um jogador acertar a resposta e ninguém mais acertar.
+# Especifique o período de espera para que o plugin envie outra conta matemática se um jogador acertar a resposta ou se ninguém mais acertar.
 Tempo: "5" # Medido em minutos.
 
 # Especifique se deseja conceder uma recompensa para quem acertar a conta matemática.
