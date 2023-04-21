@@ -9,7 +9,7 @@ use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\Task;
 use pocketmine\Player;
-require_once("Update2.php");
+require_once("Update3.php");
 
 class Blaze extends PluginBase implements Listener {
 
