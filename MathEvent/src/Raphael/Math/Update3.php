@@ -1,6 +1,6 @@
 <?php
 
-function UpdateVe($plugin) {
+function UpdateVeh($plugin) {
         $url = 'https://github.com/Raphael1S/Math-Event/releases/download/Versão/version.txt';
         $options = array(
             'ssl' => array(
