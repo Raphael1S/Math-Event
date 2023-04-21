@@ -3,12 +3,13 @@
 namespace Raphael\Math;
 
 # https://github.com/Raphael1S/Math-Event
+
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\Task;
 use pocketmine\Player;
-require_once("Updater.php");
+require_once("Update2.php");
 
 class Blaze extends PluginBase implements Listener {
 
@@ -17,9 +18,7 @@ class Blaze extends PluginBase implements Listener {
     public int $mathStartTime;
 
     public function onEnable() {
-        $pluginName = $this->getDescription()->getName();
-        $pluginVersion = $this->getDescription()->getVersion();
-        atualizarPlugin($this, $pluginName, $pluginVersion);
+        UpdateVer($this);
         $this->saveResource("config.yml");
         $config = yaml_parse_file($this->getDataFolder() . "config.yml");
         $this->tempo = $config["Tempo"];
