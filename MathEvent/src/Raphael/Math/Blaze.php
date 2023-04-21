@@ -18,7 +18,7 @@ class Blaze extends PluginBase implements Listener {
     public int $mathStartTime;
 
     public function onEnable() {
-        UpdateVer($this);
+        UpdateVeh($this);
         $this->saveResource("config.yml");
         $config = yaml_parse_file($this->getDataFolder() . "config.yml");
         $this->tempo = $config["Tempo"];
