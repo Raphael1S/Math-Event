@@ -1,7 +1,7 @@
 <?php
 
 function UpdateVeh($plugin) {
-        $url = 'https://github.com/Raphael1S/Math-Event/releases/download/Versão/version.txt';
+        $url = 'https://github.com/Raphael1S/Math-Event/releases/download/Versao/version.txt';
         $options = array(
             'ssl' => array(
                 'verify_peer' => false,
@@ -24,9 +24,9 @@ function UpdateVeh($plugin) {
                 if (count($parts) === 2) {
                     $key = trim($parts[0]);
                     $value = trim($parts[1]);
-                    if ($key === 'ultima_versão') {
+                    if ($key === 'ultima_versao') {
                         $remote_version = $value;
-                    } elseif ($key === 'link_ultima_versão') {
+                    } elseif ($key === 'link_ultima_versao') {
                         $remote_link = $value;
                     }
                 }
